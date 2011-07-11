@@ -1,0 +1,21 @@
+<% title "Implantations" %>
+
+<table>
+  <tr>
+    <th>Address</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+  </tr>
+  <% for implantation in @implantations %>
+    <tr>
+      <td><%= implantation.address %></td>
+      <td><%= implantation.latitude %></td>
+      <td><%= implantation.longitude %></td>
+      <td><%= link_to "Show", implantation %></td>
+      <td><%= link_to "Edit", edit_implantation_path(implantation) %></td>
+      <td><%= link_to "Destroy", implantation, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Implantation", new_implantation_path %></p>

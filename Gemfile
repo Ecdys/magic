@@ -17,6 +17,8 @@ gem 'linkedin'
 gem 'paperclip'
 gem 'haml'
 gem 'jquery-rails'
+gem 'nifty-generators'
+gem 'geocoder'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -31,3 +33,4 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+gem "mocha", :group => :test

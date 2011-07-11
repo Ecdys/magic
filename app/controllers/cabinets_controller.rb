@@ -15,6 +15,7 @@ class CabinetsController < ApplicationController
   def show
     @cabinet = Cabinet.find(params[:id])
     @contacts = @cabinet.contacts
+    @implantations = @cabinet.implantations
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @cabinet }

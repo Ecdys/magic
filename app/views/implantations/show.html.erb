@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= render 'implantations/box' %>
+<div style="clear: left;">
+<p>
+  <%= link_to "Edit", edit_implantation_path(@implantation) %> |
+  <%= link_to "Destroy", @implantation, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to 'Retour au cabinet', cabinet_path(@implantation.cabinet_id) %>
+</p>

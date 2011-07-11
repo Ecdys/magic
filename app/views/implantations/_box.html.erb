@@ -1,0 +1,22 @@
+<div class="implantation" >
+  <%= link_to "Edit", edit_implantation_path(@implantation) %> 
+<p>
+  <span id="titre" > <%= @implantation.site %> </span>
+</p>
+
+<p>
+  <strong>Adresse:</strong>
+  <%= @implantation.address %> 
+</p>
+	Latitude: <%= @implantation.latitude %> Longitude: <%= @implantation.longitude %>
+</p>
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@implantation.latitude}%2C#{@implantation.longitude}" %>
+</p>
+<h3>Aux alentours</h3>
+<ul>
+<% for location in @implantation.nearbys(10) %>
+<li><%= location.site %> <%= link_to location.address, location %> (<%= location.distance.round(2) %> km)</li>
+<% end %>
+</ul>
+
+</div>

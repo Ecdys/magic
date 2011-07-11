@@ -1,8 +1,11 @@
 Magic::Application.routes.draw do
+  resources :implantations
+
   resources :contacts
 
   resources :cabinets
   match "/contacts/:cabinet_id" => "contacts#new"
+  match "/implantations/:cabinet_id" => "implantations#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

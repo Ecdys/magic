@@ -46,7 +46,22 @@
 	<% end %>
 	</p>
 </div>
+<div style="clear: left;">
+<br>
+<div id ="implantation">
+    <b>Implantation :</b>
+    <%=  button_to 'Ajouter une implantation', implantation_path(@cabinet.id) %>
+<br>
 
+	<% if @implantations.nil? %>
+	<% else %>
+	<% @implantations.each do |implantation| %>
+	<% @implantation = implantation %>
+	<%= render 'implantations/box' %>
+	<% end %>
+	<% end %>
+	</p>
+</div>
 
 <p>
 <% if @cabinet.linkedin.empty? %>
@@ -78,6 +93,7 @@
 
 <% end %>
 </div>
+<br>
 
 
 <%= link_to 'Edit', edit_cabinet_path(@cabinet) %> |
