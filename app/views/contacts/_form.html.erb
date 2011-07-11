@@ -1,0 +1,22 @@
+<%= simple_form_for(@contact, :html => { :multipart => true }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :prenom %>
+	<%= f.input :nom %>
+	<%= f.input :photo %>
+	<%= f.input :phone %>
+	<%= f.input :mobile_phone %>
+	<%= f.input :fonction %>
+	<%= f.input :email %>
+	<%= f.input :linkedin %>
+	<%= f.input :viadeo %>
+	<%= f.input :facebook %>
+	<%= f.input :twitter %>
+	<%= f.input :cabinet_id, :as => :hidden %>  
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

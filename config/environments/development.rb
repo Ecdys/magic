@@ -24,4 +24,8 @@ Magic::Application.configure do
 
   # Do not compress assets
   config.assets.compress = false
+  
+  # let Paperclip know to look there by adding that directory to its path
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+  
 end

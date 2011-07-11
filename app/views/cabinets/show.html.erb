@@ -1,0 +1,84 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag @cabinet.logo.url %>
+</p>
+<p id="titre">
+<span id="titre"> 
+	<%= @cabinet.name %>
+	<%= @cabinet.statut %>
+</span>
+	<% @cabinet.rating.times { %>
+	<%= image_tag "star.png" %>
+	<% } %>
+
+<p>
+	<b>Créé le :</b>
+	<%= I18n.l @cabinet.creation_date %>
+</p>
+
+<p>
+	<b>N° SIRET :</b>
+	<%= @cabinet.siret %>
+</p>
+
+<p>
+	<b>Site internet :</b>
+	<%= link_to "#{@cabinet.cabinet_url}" , url_with_protocol(@cabinet.cabinet_url), :target => :blank %>
+</p>
+
+<p>
+	<b>Description:</b>
+	<%= @cabinet.description %>
+</p>
+<div id ="contact">
+    <b>Contact :</b>
+    <%=  button_to 'Ajouter un nouveau contact', contact_path(@cabinet.id) %>
+<br>
+
+	<% if @contacts.nil? %>
+	<% else %>
+	<% @contacts.each do |contact| %>
+	<% @contact = contact %>
+	<%= render 'contacts/box' %>
+	<% end %>
+	<% end %>
+	</p>
+</div>
+
+
+<p>
+<% if @cabinet.linkedin.empty? %>
+<% else %>
+  <b>Linkedin:</b>
+  <%= @cabinet.linkedin %>
+<% end %>
+</p>
+
+<p>
+<% if @cabinet.facebook.empty? %>
+<% else %>
+<%= image_tag "facebook.png" %>
+  <b>Facebook:</b>
+  <%= @cabinet.facebook %>
+<% end %>
+</p>
+
+<div style="clear: left;">
+<br>
+<% if @cabinet.twitter.empty? %>
+<% else %>
+
+<div class="tweets"> 
+<%= image_tag "twitter.png" , :align => 'center' %><b>  Dernier tweet:</b>
+<%= @cabinet.twitter %></p>
+
+<%= Twitter.user_timeline("#{@cabinet.twitter}").first.text %>
+
+<% end %>
+</div>
+
+
+<%= link_to 'Edit', edit_cabinet_path(@cabinet) %> |
+<%= link_to 'Back', cabinets_path %>

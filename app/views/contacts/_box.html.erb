@@ -1,0 +1,53 @@
+<div class = "contact" ><p>
+<%= link_to 'Edit', edit_contact_path(@contact) %> 
+</p>
+  <%= image_tag @contact.photo.url %>
+</p>
+<p>
+<b>	  <%= @contact.prenom %>  <%= @contact.nom %></b>
+</p>
+<p>
+  <b>Cabinet:</b>
+  <%= Cabinet.find(@contact.cabinet_id).name unless @contact.cabinet_id.nil?  %>
+</p>
+<p>
+  <b>Fonction:</b>
+  <%= @contact.fonction %>
+</p>
+<% if @contact.phone.empty? 
+	else %>
+<p>
+
+ <%= image_tag "phone.png" %> <%= @contact.phone %>
+</p>
+<% end %>
+<% if @contact.mobile_phone.empty? 
+	else %>
+<p>
+  <%= image_tag "mobile.png" %> <%= @contact.mobile_phone %>
+</p>
+<% end %>
+<% if @contact.email.empty? 
+	else %>
+
+<p>
+   <%= image_tag "email.png" %> <%= @contact.email %>
+</p>
+<% end %>
+
+<% if @contact.linkedin.empty? 
+	else %>
+<p>
+  <b>Linkedin:</b>
+  <%= @contact.linkedin %>
+</p>
+<% end %>
+
+<% if @contact.facebook.empty? 
+	else %>
+<p>
+  <b>Facebook:</b>
+  <%= @contact.facebook %>
+</p>
+<% end %>
+</div>

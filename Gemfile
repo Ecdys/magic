@@ -11,7 +11,11 @@ gem 'sqlite3'
 gem 'sass-rails', "~> 3.1.0.rc"
 gem 'coffee-script'
 gem 'uglifier'
-
+gem 'simple_form'
+gem 'twitter'
+gem 'linkedin'
+gem 'paperclip'
+gem 'haml'
 gem 'jquery-rails'
 
 # Use unicorn as the web server

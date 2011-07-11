@@ -1,0 +1,30 @@
+<%= simple_form_for(@cabinet, :html => { :multipart => true }) do |f| %>
+  <% if @cabinet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cabinet.errors.count, "error") %> prohibited this cabinet from being saved:</h2>
+
+      <ul>
+      <% @cabinet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.input :name %><br />
+    <%= f.input :statut , :collection => ["SA", "SAS", "SARL", "Association", "SNC", "commandite simple", "commandite par action"], :include_blank => false %>
+	<%= f.input :creation_date, :label => "date de création" %>
+	<%= f.input :siret %>
+	<%= f.input :logo %>
+	<%= f.input :description %>
+    <%= f.input :rating, :collection => 1..5, :as => :radio %>
+    <%= f.input :cabinet_url %>
+	<%= f.input :linkedin %>
+    <%= f.input :twitter %>
+    <%= f.input :facebook %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
