@@ -1,4 +1,6 @@
 class ImplantationsController < ApplicationController
+  # GET /implantations
+  # GET /implantations.json
   def index
     @implantations = Implantation.all
   end
@@ -9,6 +11,9 @@ class ImplantationsController < ApplicationController
 
   def new
     @implantation = Implantation.new
+    # Ajouter le cabinet_id à la nouvelle implantation cérée
+     @implantation.cabinet_id = params[:cabinet_id] 
+      
   end
 
   def create

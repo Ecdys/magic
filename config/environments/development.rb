@@ -28,4 +28,8 @@ Magic::Application.configure do
   # let Paperclip know to look there by adding that directory to its path
   Paperclip.options[:command_path] = "/usr/local/bin/"
   
+  # For devise, Setup default url options for your specific environment
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  
 end

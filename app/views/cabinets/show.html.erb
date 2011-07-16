@@ -1,6 +1,6 @@
 
 <p id="notice"><%= notice %></p>
-
+<%= @profile %>
 <p>
   <%= image_tag @cabinet.logo.url %>
 </p>
@@ -9,10 +9,11 @@
 	<%= @cabinet.name %>
 	<%= @cabinet.statut %>
 </span>
+<% unless @cabinet.rating.nil? %>	
 	<% @cabinet.rating.times { %>
 	<%= image_tag "star.png" %>
 	<% } %>
-
+<% end %>
 <p>
 	<b>Créé le :</b>
 	<%= I18n.l @cabinet.creation_date %>
@@ -32,7 +33,7 @@
 	<b>Description:</b>
 	<%= @cabinet.description %>
 </p>
-<div id ="contact">
+<div id ="contacts">
     <b>Contact :</b>
     <%=  button_to 'Ajouter un nouveau contact', contact_path(@cabinet.id) %>
 <br>
@@ -48,7 +49,7 @@
 </div>
 <div style="clear: left;">
 <br>
-<div id ="implantation">
+<div id ="implantations">
     <b>Implantation :</b>
     <%=  button_to 'Ajouter une implantation', implantation_path(@cabinet.id) %>
 <br>
@@ -62,7 +63,20 @@
 	<% end %>
 	</p>
 </div>
+<div id ="témoignages">
+    <b>Implantation :</b>
+    <%=  button_to 'Ajouter un témoignage', testimonial_path(@cabinet.id) %>
+<br>
 
+	<% if @testimonials.nil? %>
+	<% else %>
+	<% @testimonials.each do |testimonial| %>
+	<% @testimonial = testimonial %>
+	<%= render 'testimonials/box' %>
+	<% end %>
+	<% end %>
+	</p>
+</div>
 <p>
 <% if @cabinet.linkedin.empty? %>
 <% else %>

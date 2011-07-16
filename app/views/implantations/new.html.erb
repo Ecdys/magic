@@ -2,4 +2,6 @@
 
 <%= render 'form' %>
 
-<p><%= link_to "Back to List", implantations_path %></p>
+<p>
+<%= link_to 'Retour au cabinet', cabinet_path(@implantation.cabinet_id) %>
+<%= link_to "Back to List", implantations_path %></p>

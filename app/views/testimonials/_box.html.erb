@@ -1,0 +1,8 @@
+<div class="testimonial" >
+  <%= link_to "Modifier", edit_testimonial_path(@testimonial) %>
+<p>
+  <b>Citation:</b>
+  <%= @testimonial.citation %>
+	</p>
+	<%= @testimonial.client_prenom %> <%= @testimonial.client_nom %> - <%= @testimonial.client_name %>
+</div>

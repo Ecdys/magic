@@ -1,11 +1,23 @@
 Magic::Application.routes.draw do
+  get "auth/index"
+
+  get "auth/callback"
+
+  resources :testimonials
+
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  # get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
   resources :implantations
 
   resources :contacts
 
   resources :cabinets
+  root :to => "cabinets#index"
   match "/contacts/:cabinet_id" => "contacts#new"
   match "/implantations/:cabinet_id" => "implantations#new"
+  match "/testimonials/:cabinet_id" => "testimonials#new"
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

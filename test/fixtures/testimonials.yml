@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cabinet_id: 1
+  client_name: MyString
+  citation: MyText
+
+two:
+  cabinet_id: 1
+  client_name: MyString
+  citation: MyText

@@ -1,7 +1,11 @@
 class CabinetsController < ApplicationController
+before_filter :authenticate_user!
   # GET /cabinets
   # GET /cabinets.json
+  
+  
   def index
+    
     @cabinets = Cabinet.all
 
     respond_to do |format|
@@ -16,6 +20,7 @@ class CabinetsController < ApplicationController
     @cabinet = Cabinet.find(params[:id])
     @contacts = @cabinet.contacts
     @implantations = @cabinet.implantations
+    @testimonials = @cabinet.testimonials
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @cabinet }

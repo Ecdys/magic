@@ -1,0 +1,15 @@
+<%= simple_form_for(@testimonial) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :cabinet_id, :as => :hidden %>
+    <%= f.input :client_prenom, :label => "Prénom" %>
+	<%= f.input :client_nom, :label => "Nom"%>
+	<%= f.input :client_name %>
+    <%= f.input :citation %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

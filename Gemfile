@@ -17,8 +17,11 @@ gem 'linkedin'
 gem 'paperclip'
 gem 'haml'
 gem 'jquery-rails'
-gem 'nifty-generators'
+gem 'linkedin'
+gem 'omniauth'
+
 gem 'geocoder'
+gem 'devise'
 
 # Use unicorn as the web server
 # gem 'unicorn'
