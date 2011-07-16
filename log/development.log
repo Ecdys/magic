@@ -17949,3 +17949,109 @@ Served asset /application.js - 304 Not Modified  (0ms)  (pid 51313)
 
 Started GET "/assets/twitter.png" for 127.0.0.1 at 2011-07-16 15:09:54 +0200
 Served asset /twitter.png - 304 Not Modified  (4ms)  (pid 51313)
+
+
+Started GET "/cabinets/2" for 127.0.0.1 at 2011-07-16 16:28:07 +0200
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCabinet Load (0.2ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 2[0m
+  [1m[35mCabinet Load (36.0ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", 2]]
+Rendered contacts/_box.html.erb (54.0ms)
+  [1m[36mImplantation Load (0.2ms)[0m  [1mSELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 2[0m
+  [1m[35mImplantation Load (0.4ms)[0m  SELECT *, (69.09332411348201 * ABS(latitude - 48.8611047) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.3442463) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.8611047 AND longitude >= 2.3442463) THEN 45.0 WHEN (latitude < 48.8611047 AND longitude >= 2.3442463) THEN 135.0 WHEN (latitude < 48.8611047 AND longitude < 2.3442463) THEN 225.0 WHEN (latitude >= 48.8611047 AND longitude < 2.3442463) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.71637291688915 AND 49.00583648311085 AND longitude BETWEEN 2.124251286021752 AND 2.564241313978248 AND implantations.id != 2) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.8611047) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.3442463) * 0.7071067811865475)
+Rendered implantations/_box.html.erb (13.9ms)
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 2[0m
+Rendered cabinets/show.html.erb within layouts/application (2453.5ms)
+Completed 200 OK in 2852ms (Views: 2549.2ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-07-16 16:28:11 +0200
+Compiled ~/Dropbox/rails/magic/app/assets/javascripts/application.js  (7ms)  (pid 61043)
+Compiled ~/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/jquery-rails-1.0.12/vendor/assets/javascripts/jquery.js  (0ms)  (pid 61043)
+Compiled ~/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/jquery-rails-1.0.12/vendor/assets/javascripts/jquery_ujs.js  (0ms)  (pid 61043)
+Compiled ~/Dropbox/rails/magic/app/assets/javascripts/auth.js.coffee  (322ms)  (pid 61043)
+Compiled ~/Dropbox/rails/magic/app/assets/javascripts/cabinets.js.coffee  (237ms)  (pid 61043)
+Compiled ~/Dropbox/rails/magic/app/assets/javascripts/contacts.js.coffee  (287ms)  (pid 61043)
+Compiled ~/Dropbox/rails/magic/app/assets/javascripts/testimonials.js.coffee  (222ms)  (pid 61043)
+Compiled ~/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/jquery-rails-1.0.12/vendor/assets/javascripts/jquery-ui.js  (1ms)  (pid 61043)
+Served asset /application.js - 304 Not Modified  (1127ms)  (pid 61043)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-07-16 16:28:12 +0200
+Compiled ~/Dropbox/rails/magic/app/assets/stylesheets/application.css  (2ms)  (pid 61043)
+Compiled ~/Dropbox/rails/magic/app/assets/stylesheets/auth.css.scss  (20ms)  (pid 61043)
+Compiled ~/Dropbox/rails/magic/app/assets/stylesheets/cabinets.css.scss  (1ms)  (pid 61043)
+Compiled ~/Dropbox/rails/magic/app/assets/stylesheets/contacts.css.scss  (0ms)  (pid 61043)
+Compiled ~/Dropbox/rails/magic/app/assets/stylesheets/scaffolds.css.scss  (7ms)  (pid 61043)
+Compiled ~/Dropbox/rails/magic/app/assets/stylesheets/testimonials.css.scss  (0ms)  (pid 61043)
+Compiled ~/Dropbox/rails/magic/app/assets/stylesheets/application.css  (0ms)  (pid 61043)
+Served asset /application.css - 304 Not Modified  (66ms)  (pid 61043)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2011-07-16 16:28:12 +0200
+Served asset /phone.png - 304 Not Modified  (2ms)  (pid 61043)
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2011-07-16 16:28:12 +0200
+Served asset /email.png - 304 Not Modified  (7ms)  (pid 61043)
+
+
+Started GET "/assets/mobile.png" for 127.0.0.1 at 2011-07-16 16:28:12 +0200
+Served asset /mobile.png - 304 Not Modified  (1ms)  (pid 61043)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2011-07-16 16:28:12 +0200
+Served asset /star.png - 304 Not Modified  (1ms)  (pid 61043)
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2011-07-16 16:28:12 +0200
+Served asset /twitter.png - 304 Not Modified  (1ms)  (pid 61043)
+
+
+Started GET "/cabinets/1" for 127.0.0.1 at 2011-07-16 16:28:16 +0200
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCabinet Load (0.2ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mContact Load (0.3ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 1
+  [1m[36mCabinet Load (0.1ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m  [["id", 1]]
+Rendered contacts/_box.html.erb (17.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1
+Rendered contacts/_box.html.erb (2.0ms)
+  [1m[36mImplantation Load (0.2ms)[0m  [1mSELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 1[0m
+  [1m[35mImplantation Load (0.4ms)[0m  SELECT *, (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.820567 AND longitude >= 2.2692564) THEN 45.0 WHEN (latitude < 48.820567 AND longitude >= 2.2692564) THEN 135.0 WHEN (latitude < 48.820567 AND longitude < 2.2692564) THEN 225.0 WHEN (latitude >= 48.820567 AND longitude < 2.2692564) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.67583521688915 AND 48.965298783110846 AND longitude BETWEEN 2.0494393675369684 AND 2.489073432463032 AND implantations.id != 1) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475)
+Rendered implantations/_box.html.erb (11.2ms)
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1[0m
+Rendered testimonials/_box.html.erb (8.1ms)
+Rendered cabinets/show.html.erb within layouts/application (1541.8ms)
+Completed 200 OK in 1668ms (Views: 1543.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-07-16 16:28:18 +0200
+Served asset /application.css - 304 Not Modified  (0ms)  (pid 61043)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-07-16 16:28:18 +0200
+Served asset /application.js - 304 Not Modified  (0ms)  (pid 61043)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2011-07-16 16:28:18 +0200
+Served asset /star.png - 304 Not Modified  (0ms)  (pid 61043)
+
+
+Started GET "/assets/mobile.png" for 127.0.0.1 at 2011-07-16 16:28:18 +0200
+Served asset /mobile.png - 304 Not Modified  (0ms)  (pid 61043)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2011-07-16 16:28:18 +0200
+Served asset /phone.png - 304 Not Modified  (0ms)  (pid 61043)
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2011-07-16 16:28:18 +0200
+Served asset /email.png - 304 Not Modified  (0ms)  (pid 61043)
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2011-07-16 16:28:18 +0200
+Served asset /twitter.png - 304 Not Modified  (0ms)  (pid 61043)
