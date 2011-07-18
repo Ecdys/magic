@@ -7,5 +7,7 @@ class Cabinet < ActiveRecord::Base
   has_many :testimonials, :dependent => :destroy
   # has_many :testimonials, :dependent => :destroy
   has_attached_file :logo
+  
+  acts_as_taggable_on :tags
    
 end

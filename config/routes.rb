@@ -16,7 +16,10 @@ Magic::Application.routes.draw do
 
   resources :contacts
 
-  resources :cabinets
+  resources :cabinets do
+    get :autocomplete_tag_name, :on => :collection    
+  end
+  
   root :to => "pages#home"
   match "/contacts/:cabinet_id" => "contacts#new"
   match "/implantations/:cabinet_id" => "implantations#new"

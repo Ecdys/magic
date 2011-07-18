@@ -13,6 +13,7 @@
 
   <div class="field">
     <%= f.input :name %><br />
+    <%= f.input :tag_list, :url => autocomplete_tag_name_cabinets_path, :as => :autocomplete %>
     <%= f.input :statut , :collection => ["SA", "SAS", "SARL", "Association", "SNC", "commandite simple", "commandite par action"], :include_blank => false %>
 	<%= f.input :creation_date, :label => "date de création" %>
 	<%= f.input :siret %>

@@ -3,6 +3,7 @@ before_filter :authenticate_user!
   # GET /cabinets
   # GET /cabinets.json
   
+autocomplete :tag, :name, :class_name => 'ActsAsTaggableOn::Tag'
   
   def index
     

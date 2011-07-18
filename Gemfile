@@ -23,6 +23,9 @@ gem 'omniauth'
 gem 'geocoder'
 gem 'devise'
 
+gem 'rails3-jquery-autocomplete'
+gem 'acts-as-taggable-on'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
