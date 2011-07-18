@@ -47,9 +47,12 @@ before_filter :authenticate_user!
   # POST /cabinets.json
   def create
     @cabinet = Cabinet.new(params[:cabinet])
+    
 
     respond_to do |format|
       if @cabinet.save
+        current_user.cabinet_id = @cabinet.id
+        current_user.save
         format.html { redirect_to @cabinet, notice: 'Cabinet was successfully created.' }
         format.json { render json: @cabinet, status: :created, location: @cabinet }
       else

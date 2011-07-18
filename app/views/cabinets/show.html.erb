@@ -1,9 +1,9 @@
 
 <p id="notice"><%= notice %></p>
 <%= @profile %>
-<p>
-  <%= image_tag @cabinet.logo.url %>
-</p>
+
+<%= image_tag @cabinet.logo.url unless @cabinet.logo_file_name.nil? %>
+
 <p id="titre">
 <span id="titre"> 
 	<%= @cabinet.name %>
@@ -64,7 +64,7 @@
 	</p>
 </div>
 <div id ="témoignages">
-    <b>Implantation :</b>
+    <b>Témoignages :</b>
     <%=  button_to 'Ajouter un témoignage', testimonial_path(@cabinet.id) %>
 <br>
 

@@ -3,6 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body.testimonials {
-  // Add the testimonials class to your body tag
-  // Then, place scoped styles here.
+ blockquote {
+ font: 1.2em/1.6em Georgia, "Times New Roman", Times, serif;width: 400px;
+ background: url(images/close-quote.gif) no-repeat right bottom;
+ padding-left: 18px;
+ text-indent: -18px;
+ color:red;
+ }
+ blockquote:first-letter {
+ background: url(images/open-quote.gif) no-repeat left top;
+ padding-left: 18px;
+ font: italic 1.4em Georgia, "Times New Roman", Times, serif;
+ }
 }

@@ -17,6 +17,17 @@
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
-    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-  </body>
+<br>
+<div id="user_nav">
+	<% if user_signed_in? %>
+	Vous êtes connecté comme <%= current_user.email %> Ce n'est pas vous ?
+	<%= link_to "Se déconnecter" , destroy_user_session_path , :method => :delete%>    
+	<% else %>
+	<%= link_to "S'enregistrer", new_user_registration_path  %> or <%= link_to "Se connecter" , new_user_session_path %>
+	<% end %>
+
+
+</p>
+<%= link_to "Se connecter avec Facebook", user_omniauth_authorize_path(:facebook) %>
+</body>
 </html>

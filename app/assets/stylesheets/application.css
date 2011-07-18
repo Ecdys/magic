@@ -76,3 +76,48 @@
 	font: small-caps 140% "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #a9a9a9;
 }
+blockquote {
+ font: 1.2em/1.6em Georgia, "Times New Roman", Times, serif;
+ width: 400px;
+ background: url(close-quote.gif) no-repeat right bottom;
+ 
+ }
+ blockquote:first-letter {
+ background: url(open-quote.gif) no-repeat left top;
+ padding-left: 18px;
+ font: italic 1.4em Georgia, "Times New Roman", Times, serif;
+ }
+.signature {
+
+position:relative;
+font: small-caps 80% "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+ }
+
+/* Top User Regions
+-----------------------------------------------*/
+
+#top-user-regions {
+  font-size: 0.8em;
+  width: 480px;
+float:left;
+ 
+}
+
+
+#top-user-regions .user-region-inner {
+  padding: 10px;
+  margin: 0 5px;
+  color: #666666;
+  background: #ffffff url(block_bg.png) top repeat-x;
+  border: 1px solid #cccccc;
+  border-top: 1px solid #dddddd;
+  border-bottom: 2px solid #cccccc;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.gauche {
+	vertical-align:bottom;
+	width:32px;
+}
+

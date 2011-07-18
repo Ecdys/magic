@@ -1,4 +1,8 @@
 Magic::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/help"
+
   get "auth/index"
 
   get "auth/callback"
@@ -13,7 +17,7 @@ Magic::Application.routes.draw do
   resources :contacts
 
   resources :cabinets
-  root :to => "cabinets#index"
+  root :to => "pages#home"
   match "/contacts/:cabinet_id" => "contacts#new"
   match "/implantations/:cabinet_id" => "implantations#new"
   match "/testimonials/:cabinet_id" => "testimonials#new"

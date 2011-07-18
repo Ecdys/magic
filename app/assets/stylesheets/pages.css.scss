@@ -1,0 +1,35 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body.pages {
+
+.block {
+  margin: 15px auto 0;
+  position: relative;
+  padding: 20px;
+  width: 600px;
+  clear: both;
+  overflow: hidden;
+  background-color: #fffeff;
+	color: #d5d5d5;
+	font: small-caps bold 140% "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+.highlight {
+  color: #a9a9a9;
+  display: block;
+	font: bold 140% "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+.color {
+  color: #d5d5d5;
+  position: absolute;
+  top: 19px;
+font-size: 140%;
+}
+
+
+  // Add the pages class to your body tag
+  // Then, place scoped styles here.
+}
