@@ -23,11 +23,11 @@
 	Vous êtes connecté comme <%= current_user.email %> Ce n'est pas vous ?
 	<%= link_to "Se déconnecter" , destroy_user_session_path , :method => :delete%>    
 	<% else %>
-	<%= link_to "S'enregistrer", new_user_registration_path  %> or <%= link_to "Se connecter" , new_user_session_path %>
-	<% end %>
+	<%= link_to "S'enregistrer", new_user_registration_path  %> or <%= link_to "Se connecter" , new_user_session_path %> or <%= link_to "Se connecter avec Facebook", user_omniauth_authorize_path(:facebook) %>
+	<% end %> 
 
 
 </p>
-<%= link_to "Se connecter avec Facebook", user_omniauth_authorize_path(:facebook) %>
+
 </body>
 </html>

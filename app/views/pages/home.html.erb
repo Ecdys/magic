@@ -9,10 +9,10 @@
 
 <% if user_signed_in?  %>
          
-
+<div>
 <div id="top-user-regions" class="clear-block">
 <div class="user-region-inner" style="font-size: 1.3em;">
-<h3><%= image_tag "client.png" , :class => "gauche"     %>   Je suis un client</h3>
+<h3><%= image_tag "client.png", :id => "toto" , :class => "gauche"     %>   Je suis un client</h3>
 
  <li>
 <%= link_to "Je souhaite consulter la liste des cabinets de conseil", cabinets_path %>
@@ -22,11 +22,12 @@
  <li>
 	<%= link_to "Je souhaite témoigner pour un cabinet", new_testimonial_path %>
  </li>
+ <li>Je souhaite évaluer un cabinet de conseil</li>
  <li>Je souhaite enregistrer mon profil</li>
 
 </div>
 </div>
-
+<div id="lulu">
 <div id="top-user-regions" class="clear-block">
 <div class="user-region-inner" style="font-size: 1.3em;">
 
@@ -61,6 +62,7 @@
 
 	<% end %>
 <% end %>
+</div>
 <div style = "clear:both">
 <br>
 

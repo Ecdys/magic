@@ -8,4 +8,15 @@
 //= require jquery_ujs
 //= require_tree .
 //= require jquery-ui
+$(document).ready(function(){
 
+$('#p_contact').click(function(){
+	 $('#contact_panel').toggle();
+})
+
+
+$('#p_implantation').click(function(){
+	 $('#implantation_panel').toggle();
+})
+
+})

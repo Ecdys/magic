@@ -78,8 +78,9 @@
 }
 blockquote {
  font: 1.2em/1.6em Georgia, "Times New Roman", Times, serif;
- width: 400px;
+ width: 100%;
  background: url(close-quote.gif) no-repeat right bottom;
+ 
  
  }
  blockquote:first-letter {

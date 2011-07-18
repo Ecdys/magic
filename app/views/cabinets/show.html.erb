@@ -33,11 +33,13 @@
 	<b>Description:</b>
 	<%= @cabinet.description %>
 </p>
-<div id ="contacts">
-    <b>Contact :</b>
-    <%=  button_to 'Ajouter un nouveau contact', contact_path(@cabinet.id) %>
+<div id="p_contact">
+    <%= @contacts.count %> 
+    contact(s). 
+</div>
 <br>
 
+<div id="contact_panel">   
 	<% if @contacts.nil? %>
 	<% else %>
 	<% @contacts.each do |contact| %>
@@ -45,15 +47,20 @@
 	<%= render 'contacts/box' %>
 	<% end %>
 	<% end %>
-	</p>
+	<br>
+ <%=  button_to 'Ajouter un nouveau contact', contact_path(@cabinet.id) %>
 </div>
+
 <div style="clear: left;">
 <br>
-<div id ="implantations">
-    <b>Implantation :</b>
-    <%=  button_to 'Ajouter une implantation', implantation_path(@cabinet.id) %>
+
+<div id="p_implantation" >
+    <%= @implantations.count %> 
+    Implantation(s).
+</div>   
 <br>
 
+<div id ="implantation_panel">
 	<% if @implantations.nil? %>
 	<% else %>
 	<% @implantations.each do |implantation| %>
@@ -61,11 +68,13 @@
 	<%= render 'implantations/box' %>
 	<% end %>
 	<% end %>
-	</p>
+	<br>
+<%=  button_to 'Ajouter une implantation', implantation_path(@cabinet.id) %>
 </div>
+
 <div id ="témoignages">
     <b>Témoignages :</b>
-    <%=  button_to 'Ajouter un témoignage', testimonial_path(@cabinet.id) %>
+    <!-- <%=  button_to 'Ajouter un témoignage', testimonial_path(@cabinet.id) %> -->
 <br>
 
 	<% if @testimonials.nil? %>

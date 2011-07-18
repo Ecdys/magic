@@ -5,6 +5,9 @@
 
 fr: 
   devise: 
+    omniauth_callbacks:
+        success: 'Autorisation acceptée par votre compte  %{kind} .'
+        failure: 'Autorisation refusée de %{kind} pour la raison suivante "%{reason}".'
     confirmations: 
       confirmed: "Votre compte a été confirmé. Vous êtes à présent connecté(e)."
       new: 
@@ -95,3 +98,5 @@ fr:
       already_confirmed: "a déjà été confirmé"
       not_found: "introuvable"
       not_locked: "n’a pas été verrouillé"
+      
+    
