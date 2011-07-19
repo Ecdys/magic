@@ -118,7 +118,16 @@ float:left;
 }
 
 .gauche {
-	vertical-align:bottom;
+	vertical-align:middle;
 	width:32px;
 }
+.bandeau {
+	background-color: #ec3000;
+	color: #fffeff;
+	font-weight: bold;
+	width: 98%;
+	height: 30px;
+	padding-top: 10px;
+	padding-left: 10px;
 
+}

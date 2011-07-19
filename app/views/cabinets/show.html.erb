@@ -37,13 +37,13 @@
 	<b>Mots clés:</b>
 	<%= @cabinet.tag_list %>
 </p>
-<div id="p_contact">
-    <%= @contacts.count %> 
+<div class="bandeau" id="p_contact">
+    <%= image_tag "tirette.png", :class => "gauche"  %>  <%= @contacts.count %> 
     contact(s). 
 </div>
 <br>
 
-<div id="contact_panel">   
+<div id="contact_panel" style="display:none">  
 	<% if @contacts.nil? %>
 	<% else %>
 	<% @contacts.each do |contact| %>
@@ -56,15 +56,15 @@
 </div>
 
 <div style="clear: left;">
-<br>
 
-<div id="p_implantation" >
-    <%= @implantations.count %> 
+
+<div class="bandeau" id="p_implantation" >
+    <%= image_tag "tirette.png", :class => "gauche"  %>  <%= @implantations.count %> 
     Implantation(s).
 </div>   
 <br>
 
-<div id ="implantation_panel">
+<div id ="implantation_panel" style="display:none">
 	<% if @implantations.nil? %>
 	<% else %>
 	<% @implantations.each do |implantation| %>
@@ -76,11 +76,13 @@
 <%=  button_to 'Ajouter une implantation', implantation_path(@cabinet.id) %>
 </div>
 
-<div id ="témoignages">
-    <b>Témoignages :</b>
-    <!-- <%=  button_to 'Ajouter un témoignage', testimonial_path(@cabinet.id) %> -->
+<div class="bandeau" id="p_testimonial" >
+    <%= image_tag "tirette.png", :class => "gauche"  %>  <%= @testimonials.count %> 
+    témoignage(s) de clients.
+</div>   
 <br>
-
+<div id ="testimonial_panel" style="display:none">
+    <!-- <%=  button_to 'Ajouter un témoignage', testimonial_path(@cabinet.id) %> -->
 	<% if @testimonials.nil? %>
 	<% else %>
 	<% @testimonials.each do |testimonial| %>
@@ -90,6 +92,11 @@
 	<% end %>
 	</p>
 </div>
+<div class="bandeau" id="p_social" >    
+    <%= image_tag "tirette.png", :class => "gauche"  %>  Activité sur les réseaux sociaux
+</div>   
+<br>
+<div id ="social_panel" style="display:none">
 <p>
 <% if @cabinet.linkedin.empty? %>
 <% else %>
