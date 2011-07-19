@@ -38,7 +38,7 @@
 	<%= @cabinet.tag_list %>
 </p>
 <div class="bandeau" id="p_contact">
-    <%= image_tag "tirette.png", :class => "gauche"  %>  <%= @contacts.count %> 
+    <%= image_tag "tirette.png", :class => "gauche", :id => "contact_image"  %>  <%= @contacts.count %> 
     contact(s). 
 </div>
 <br>
@@ -95,7 +95,7 @@
 <div class="bandeau" id="p_social" >    
     <%= image_tag "tirette.png", :class => "gauche"  %>  Activité sur les réseaux sociaux
 </div>   
-<br>
+
 <div id ="social_panel" style="display:none">
 <p>
 <% if @cabinet.linkedin.empty? %>
@@ -115,7 +115,7 @@
 </p>
 
 <div style="clear: left;">
-<br>
+
 <% if @cabinet.twitter.empty? %>
 <% else %>
 

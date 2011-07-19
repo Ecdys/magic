@@ -45151,3 +45151,606 @@ Served asset /close-quote.gif - 304 Not Modified  (0ms)  (pid 512)
 
 Started GET "/assets/open-quote.gif" for 127.0.0.1 at 2011-07-19 15:24:35 +0200
 Served asset /open-quote.gif - 304 Not Modified  (0ms)  (pid 512)
+
+
+Started GET "/cabinets/1" for 127.0.0.1 at 2011-07-19 16:49:01 +0200
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCabinet Load (0.2ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Cabinet' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."cabinet_id" = 1
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 1[0m
+  [1m[35mCabinet Load (21.7ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", 1]]
+Rendered contacts/_box.html.erb (47.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m
+Rendered contacts/_box.html.erb (2.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "implantations" WHERE "implantations"."cabinet_id" = 1
+  [1m[36mImplantation Load (0.1ms)[0m  [1mSELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 1[0m
+  [1m[35mImplantation Load (0.4ms)[0m  SELECT *, (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.820567 AND longitude >= 2.2692564) THEN 45.0 WHEN (latitude < 48.820567 AND longitude >= 2.2692564) THEN 135.0 WHEN (latitude < 48.820567 AND longitude < 2.2692564) THEN 225.0 WHEN (latitude >= 48.820567 AND longitude < 2.2692564) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.67583521688915 AND 48.965298783110846 AND longitude BETWEEN 2.0494393675369684 AND 2.489073432463032 AND implantations.id != 1) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475)
+Rendered implantations/_box.html.erb (12.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1[0m
+  [1m[35mTestimonial Load (0.1ms)[0m  SELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1
+Rendered testimonials/_box.html.erb (7.5ms)
+Rendered testimonials/_box.html.erb (0.8ms)
+Rendered cabinets/show.html.erb within layouts/application (2676.9ms)
+Completed 200 OK in 3013ms (Views: 2719.2ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-07-19 16:49:04 +0200
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/application.css  (6ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/auth.css.scss  (7ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/cabinets.css.scss  (0ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/contacts.css.scss  (0ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/jquery-ui-1.8.14.custom.css  (0ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/pages.css.scss  (2ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/scaffolds.css.scss  (4ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/testimonials.css.scss  (0ms)  (pid 19644)
+Served asset /application.css - 304 Not Modified  (30ms)  (pid 19644)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-07-19 16:49:04 +0200
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/application.js  (4ms)  (pid 19644)
+Compiled ~/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/jquery-rails-1.0.12/vendor/assets/javascripts/jquery.js  (0ms)  (pid 19644)
+Compiled ~/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/jquery-rails-1.0.12/vendor/assets/javascripts/jquery_ujs.js  (0ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/auth.js.coffee  (261ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/cabinets.js.coffee  (228ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/contacts.js.coffee  (217ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/pages.js.coffee  (219ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/testimonials.js.coffee  (245ms)  (pid 19644)
+Compiled ~/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/jquery-rails-1.0.12/vendor/assets/javascripts/jquery-ui.js  (1ms)  (pid 19644)
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/application.js  (0ms)  (pid 19644)
+Served asset /application.js - 200 OK  (1215ms)  (pid 19644)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2011-07-19 16:49:06 +0200
+Served asset /phone.png - 304 Not Modified  (5ms)  (pid 19644)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2011-07-19 16:49:06 +0200
+Served asset /star.png - 304 Not Modified  (2ms)  (pid 19644)
+
+
+Started GET "/assets/mobile.png" for 127.0.0.1 at 2011-07-19 16:49:06 +0200
+Served asset /mobile.png - 304 Not Modified  (1ms)  (pid 19644)
+
+
+Started GET "/assets/tirette.png" for 127.0.0.1 at 2011-07-19 16:49:06 +0200
+Served asset /tirette.png - 304 Not Modified  (1ms)  (pid 19644)
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2011-07-19 16:49:06 +0200
+Served asset /email.png - 304 Not Modified  (1ms)  (pid 19644)
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2011-07-19 16:49:06 +0200
+Served asset /twitter.png - 304 Not Modified  (2ms)  (pid 19644)
+
+
+Started GET "/cabinets/1" for 127.0.0.1 at 2011-07-19 18:13:22 +0200
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCabinet Load (0.2ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Cabinet' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."cabinet_id" = 1
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 1[0m
+  [1m[35mCabinet Load (0.1ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", 1]]
+Rendered contacts/_box.html.erb (18.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m
+Rendered contacts/_box.html.erb (46.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "implantations" WHERE "implantations"."cabinet_id" = 1
+  [1m[36mImplantation Load (0.1ms)[0m  [1mSELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 1[0m
+  [1m[35mImplantation Load (0.4ms)[0m  SELECT *, (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.820567 AND longitude >= 2.2692564) THEN 45.0 WHEN (latitude < 48.820567 AND longitude >= 2.2692564) THEN 135.0 WHEN (latitude < 48.820567 AND longitude < 2.2692564) THEN 225.0 WHEN (latitude >= 48.820567 AND longitude < 2.2692564) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.67583521688915 AND 48.965298783110846 AND longitude BETWEEN 2.0494393675369684 AND 2.489073432463032 AND implantations.id != 1) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475)
+Rendered implantations/_box.html.erb (11.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1[0m
+  [1m[35mTestimonial Load (0.1ms)[0m  SELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1
+Rendered testimonials/_box.html.erb (7.0ms)
+Rendered testimonials/_box.html.erb (0.5ms)
+Rendered cabinets/show.html.erb within layouts/application (60137.9ms)
+Completed 500 Internal Server Error in 60314ms
+
+ActionView::Template::Error (getaddrinfo: nodename nor servname provided, or not known):
+    123: <%= image_tag "twitter.png" , :align => 'center' %><b>  Dernier tweet:</b>
+    124: <%= @cabinet.twitter %></p>
+    125: 
+    126: <%= Twitter.user_timeline("#{@cabinet.twitter}").first.text %>
+    127: 
+    128: <% end %>
+    129: </div>
+  app/views/cabinets/show.html.erb:126:in `_app_views_cabinets_show_html_erb___3435867800960628605_2182857000'
+  app/controllers/cabinets_controller.rb:25:in `show'
+
+Rendered /Users/herveleroy/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/herveleroy/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/herveleroy/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/cabinets/1" for 127.0.0.1 at 2011-07-19 18:14:23 +0200
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCabinet Load (0.2ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Cabinet' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."cabinet_id" = 1
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 1[0m
+  [1m[35mCabinet Load (0.1ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", 1]]
+Rendered contacts/_box.html.erb (17.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m
+Rendered contacts/_box.html.erb (2.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "implantations" WHERE "implantations"."cabinet_id" = 1
+  [1m[36mImplantation Load (0.1ms)[0m  [1mSELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 1[0m
+  [1m[35mImplantation Load (0.3ms)[0m  SELECT *, (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.820567 AND longitude >= 2.2692564) THEN 45.0 WHEN (latitude < 48.820567 AND longitude >= 2.2692564) THEN 135.0 WHEN (latitude < 48.820567 AND longitude < 2.2692564) THEN 225.0 WHEN (latitude >= 48.820567 AND longitude < 2.2692564) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.67583521688915 AND 48.965298783110846 AND longitude BETWEEN 2.0494393675369684 AND 2.489073432463032 AND implantations.id != 1) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475)
+Rendered implantations/_box.html.erb (52.8ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1[0m
+  [1m[35mTestimonial Load (0.1ms)[0m  SELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1
+Rendered testimonials/_box.html.erb (6.9ms)
+Rendered testimonials/_box.html.erb (0.5ms)
+Rendered cabinets/show.html.erb within layouts/application (60171.0ms)
+Completed   in 60296ms
+
+
+Started GET "/cabinets/1" for 127.0.0.1 at 2011-07-19 18:15:54 +0200
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCabinet Load (0.2ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Cabinet' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."cabinet_id" = 1
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 1[0m
+  [1m[35mCabinet Load (20.2ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", 1]]
+Rendered contacts/_box.html.erb (38.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m
+Rendered contacts/_box.html.erb (2.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "implantations" WHERE "implantations"."cabinet_id" = 1
+  [1m[36mImplantation Load (0.1ms)[0m  [1mSELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 1[0m
+  [1m[35mImplantation Load (0.4ms)[0m  SELECT *, (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.820567 AND longitude >= 2.2692564) THEN 45.0 WHEN (latitude < 48.820567 AND longitude >= 2.2692564) THEN 135.0 WHEN (latitude < 48.820567 AND longitude < 2.2692564) THEN 225.0 WHEN (latitude >= 48.820567 AND longitude < 2.2692564) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.67583521688915 AND 48.965298783110846 AND longitude BETWEEN 2.0494393675369684 AND 2.489073432463032 AND implantations.id != 1) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475)
+Rendered implantations/_box.html.erb (12.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1[0m
+  [1m[35mTestimonial Load (0.1ms)[0m  SELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1
+Rendered testimonials/_box.html.erb (51.4ms)
+Rendered testimonials/_box.html.erb (0.6ms)
+Rendered cabinets/show.html.erb within layouts/application (49750.5ms)
+Completed 500 Internal Server Error in 50071ms
+
+ActionView::Template::Error (getaddrinfo: nodename nor servname provided, or not known):
+    123: <%= image_tag "twitter.png" , :align => 'center' %><b>  Dernier tweet:</b>
+    124: <%= @cabinet.twitter %></p>
+    125: 
+    126: <%= Twitter.user_timeline("#{@cabinet.twitter}").first.text %>
+    127: 
+    128: <% end %>
+    129: </div>
+  app/views/cabinets/show.html.erb:126:in `_app_views_cabinets_show_html_erb__1513288386142880844_2176907400'
+  app/controllers/cabinets_controller.rb:25:in `show'
+
+Rendered /Users/herveleroy/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/herveleroy/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/herveleroy/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/cabinets/1" for 127.0.0.1 at 2011-07-19 22:42:57 +0200
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCabinet Load (0.2ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Cabinet' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."cabinet_id" = 1
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 1[0m
+  [1m[35mCabinet Load (0.1ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", 1]]
+Rendered contacts/_box.html.erb (59.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m
+Rendered contacts/_box.html.erb (2.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "implantations" WHERE "implantations"."cabinet_id" = 1
+  [1m[36mImplantation Load (0.1ms)[0m  [1mSELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 1[0m
+  [1m[35mImplantation Load (0.4ms)[0m  SELECT *, (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.820567 AND longitude >= 2.2692564) THEN 45.0 WHEN (latitude < 48.820567 AND longitude >= 2.2692564) THEN 135.0 WHEN (latitude < 48.820567 AND longitude < 2.2692564) THEN 225.0 WHEN (latitude >= 48.820567 AND longitude < 2.2692564) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.67583521688915 AND 48.965298783110846 AND longitude BETWEEN 2.0494393675369684 AND 2.489073432463032 AND implantations.id != 1) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475)
+Rendered implantations/_box.html.erb (10.9ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1[0m
+  [1m[35mTestimonial Load (0.1ms)[0m  SELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1
+Rendered testimonials/_box.html.erb (6.8ms)
+Rendered testimonials/_box.html.erb (0.5ms)
+Rendered cabinets/show.html.erb within layouts/application (1091.8ms)
+Completed 200 OK in 1264ms (Views: 1094.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-07-19 22:42:58 +0200
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/application.css  (3ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/auth.css.scss  (6ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/cabinets.css.scss  (0ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/contacts.css.scss  (0ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/jquery-ui-1.8.14.custom.css  (47ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/pages.css.scss  (2ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/scaffolds.css.scss  (4ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/testimonials.css.scss  (0ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/application.css  (0ms)  (pid 22845)
+Served asset /application.css - 200 OK  (73ms)  (pid 22845)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-07-19 22:42:58 +0200
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/application.js  (5ms)  (pid 22845)
+Compiled ~/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/jquery-rails-1.0.12/vendor/assets/javascripts/jquery.js  (1ms)  (pid 22845)
+Compiled ~/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/jquery-rails-1.0.12/vendor/assets/javascripts/jquery_ujs.js  (0ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/auth.js.coffee  (267ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/cabinets.js.coffee  (228ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/contacts.js.coffee  (218ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/pages.js.coffee  (218ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/testimonials.js.coffee  (215ms)  (pid 22845)
+Compiled ~/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/jquery-rails-1.0.12/vendor/assets/javascripts/jquery-ui.js  (60ms)  (pid 22845)
+Served asset /application.js - 304 Not Modified  (1237ms)  (pid 22845)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2011-07-19 22:43:00 +0200
+Served asset /star.png - 304 Not Modified  (4ms)  (pid 22845)
+
+
+Started GET "/assets/tirette.png" for 127.0.0.1 at 2011-07-19 22:43:00 +0200
+Served asset /tirette.png - 304 Not Modified  (3ms)  (pid 22845)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2011-07-19 22:43:00 +0200
+Served asset /phone.png - 304 Not Modified  (4ms)  (pid 22845)
+
+
+Started GET "/assets/mobile.png" for 127.0.0.1 at 2011-07-19 22:43:00 +0200
+Served asset /mobile.png - 304 Not Modified  (1ms)  (pid 22845)
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2011-07-19 22:43:00 +0200
+Served asset /email.png - 304 Not Modified  (2ms)  (pid 22845)
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2011-07-19 22:43:00 +0200
+Served asset /twitter.png - 304 Not Modified  (1ms)  (pid 22845)
+
+
+Started GET "/cabinets/1" for 127.0.0.1 at 2011-07-19 22:46:01 +0200
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCabinet Load (0.2ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Cabinet' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."cabinet_id" = 1
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 1[0m
+  [1m[35mCabinet Load (0.1ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", 1]]
+Rendered contacts/_box.html.erb (18.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m
+Rendered contacts/_box.html.erb (2.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "implantations" WHERE "implantations"."cabinet_id" = 1
+  [1m[36mImplantation Load (0.1ms)[0m  [1mSELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 1[0m
+  [1m[35mImplantation Load (0.4ms)[0m  SELECT *, (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.820567 AND longitude >= 2.2692564) THEN 45.0 WHEN (latitude < 48.820567 AND longitude >= 2.2692564) THEN 135.0 WHEN (latitude < 48.820567 AND longitude < 2.2692564) THEN 225.0 WHEN (latitude >= 48.820567 AND longitude < 2.2692564) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.67583521688915 AND 48.965298783110846 AND longitude BETWEEN 2.0494393675369684 AND 2.489073432463032 AND implantations.id != 1) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475)
+Rendered implantations/_box.html.erb (11.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1[0m
+  [1m[35mTestimonial Load (0.1ms)[0m  SELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1
+Rendered testimonials/_box.html.erb (6.9ms)
+Rendered testimonials/_box.html.erb (0.5ms)
+Rendered cabinets/show.html.erb within layouts/application (1112.9ms)
+Completed 200 OK in 1289ms (Views: 1157.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-07-19 22:46:02 +0200
+Compiled ~/Dropbox/railsbis/magic/app/assets/javascripts/application.js  (0ms)  (pid 22845)
+Served asset /application.js - 200 OK  (0ms)  (pid 22845)
+
+
+Started GET "/assets/tirette.png" for 127.0.0.1 at 2011-07-19 22:46:02 +0200
+Served asset /tirette.png - 200 OK  (0ms)  (pid 22845)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2011-07-19 22:46:02 +0200
+Served asset /phone.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2011-07-19 22:46:02 +0200
+Served asset /email.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/mobile.png" for 127.0.0.1 at 2011-07-19 22:46:02 +0200
+Served asset /mobile.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2011-07-19 22:46:02 +0200
+Served asset /star.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2011-07-19 22:46:02 +0200
+Served asset /twitter.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-07-19 22:46:03 +0200
+Served asset /application.css - 200 OK  (0ms)  (pid 22845)
+
+
+Started GET "/cabinets/1" for 127.0.0.1 at 2011-07-19 22:46:32 +0200
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCabinet Load (0.2ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Cabinet' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."cabinet_id" = 1
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 1[0m
+  [1m[35mCabinet Load (0.1ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", 1]]
+Rendered contacts/_box.html.erb (17.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m
+Rendered contacts/_box.html.erb (2.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "implantations" WHERE "implantations"."cabinet_id" = 1
+  [1m[36mImplantation Load (0.1ms)[0m  [1mSELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 1[0m
+  [1m[35mImplantation Load (0.4ms)[0m  SELECT *, (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.820567 AND longitude >= 2.2692564) THEN 45.0 WHEN (latitude < 48.820567 AND longitude >= 2.2692564) THEN 135.0 WHEN (latitude < 48.820567 AND longitude < 2.2692564) THEN 225.0 WHEN (latitude >= 48.820567 AND longitude < 2.2692564) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.67583521688915 AND 48.965298783110846 AND longitude BETWEEN 2.0494393675369684 AND 2.489073432463032 AND implantations.id != 1) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475)
+Rendered implantations/_box.html.erb (53.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1[0m
+  [1m[35mTestimonial Load (0.1ms)[0m  SELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1
+Rendered testimonials/_box.html.erb (6.8ms)
+Rendered testimonials/_box.html.erb (0.5ms)
+Rendered cabinets/show.html.erb within layouts/application (1459.6ms)
+Completed 200 OK in 1589ms (Views: 1461.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/mobile.png" for 127.0.0.1 at 2011-07-19 22:46:34 +0200
+Served asset /mobile.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2011-07-19 22:46:34 +0200
+Served asset /twitter.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2011-07-19 22:46:34 +0200
+Served asset /email.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2011-07-19 22:46:34 +0200
+Served asset /star.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2011-07-19 22:46:34 +0200
+Served asset /phone.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/open-quote.gif" for 127.0.0.1 at 2011-07-19 22:47:25 +0200
+Served asset /open-quote.gif - 304 Not Modified  (1ms)  (pid 22845)
+
+
+Started GET "/assets/close-quote.gif" for 127.0.0.1 at 2011-07-19 22:47:25 +0200
+Served asset /close-quote.gif - 304 Not Modified  (1ms)  (pid 22845)
+
+
+Started GET "/cabinets/1" for 127.0.0.1 at 2011-07-19 22:49:23 +0200
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCabinet Load (0.2ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Cabinet' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."cabinet_id" = 1
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 1[0m
+  [1m[35mCabinet Load (0.1ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", 1]]
+Rendered contacts/_box.html.erb (17.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m
+Rendered contacts/_box.html.erb (46.8ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "implantations" WHERE "implantations"."cabinet_id" = 1
+  [1m[36mImplantation Load (0.1ms)[0m  [1mSELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 1[0m
+  [1m[35mImplantation Load (0.4ms)[0m  SELECT *, (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.820567 AND longitude >= 2.2692564) THEN 45.0 WHEN (latitude < 48.820567 AND longitude >= 2.2692564) THEN 135.0 WHEN (latitude < 48.820567 AND longitude < 2.2692564) THEN 225.0 WHEN (latitude >= 48.820567 AND longitude < 2.2692564) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.67583521688915 AND 48.965298783110846 AND longitude BETWEEN 2.0494393675369684 AND 2.489073432463032 AND implantations.id != 1) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.820567) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.2692564) * 0.7071067811865475)
+Rendered implantations/_box.html.erb (11.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1[0m
+  [1m[35mTestimonial Load (0.1ms)[0m  SELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 1
+Rendered testimonials/_box.html.erb (7.0ms)
+Rendered testimonials/_box.html.erb (0.5ms)
+Rendered cabinets/show.html.erb within layouts/application (1006.5ms)
+Completed 200 OK in 1181ms (Views: 1008.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-07-19 22:49:24 +0200
+Served asset /application.js - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-07-19 22:49:24 +0200
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/application.css  (4ms)  (pid 22845)
+Compiled ~/Dropbox/railsbis/magic/app/assets/stylesheets/application.css  (0ms)  (pid 22845)
+Served asset /application.css - 200 OK  (8ms)  (pid 22845)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2011-07-19 22:49:24 +0200
+Served asset /star.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/tirette.png" for 127.0.0.1 at 2011-07-19 22:49:24 +0200
+Served asset /tirette.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/mobile.png" for 127.0.0.1 at 2011-07-19 22:49:24 +0200
+Served asset /mobile.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2011-07-19 22:49:24 +0200
+Served asset /phone.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2011-07-19 22:49:24 +0200
+Served asset /email.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2011-07-19 22:49:24 +0200
+Served asset /twitter.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/cabinets/2" for 127.0.0.1 at 2011-07-19 22:50:51 +0200
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCabinet Load (0.2ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Cabinet' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."cabinet_id" = 2
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 2[0m
+  [1m[35mCabinet Load (0.1ms)[0m  SELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1  [["id", 2]]
+Rendered contacts/_box.html.erb (17.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "implantations" WHERE "implantations"."cabinet_id" = 2[0m
+  [1m[35mImplantation Load (0.1ms)[0m  SELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 2
+  [1m[36mImplantation Load (0.4ms)[0m  [1mSELECT *, (69.09332411348201 * ABS(latitude - 48.8611047) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.3442463) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.8611047 AND longitude >= 2.3442463) THEN 45.0 WHEN (latitude < 48.8611047 AND longitude >= 2.3442463) THEN 135.0 WHEN (latitude < 48.8611047 AND longitude < 2.3442463) THEN 225.0 WHEN (latitude >= 48.8611047 AND longitude < 2.3442463) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.71637291688915 AND 49.00583648311085 AND longitude BETWEEN 2.124251286021752 AND 2.564241313978248 AND implantations.id != 2) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.8611047) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.3442463) * 0.7071067811865475)[0m
+Rendered implantations/_box.html.erb (11.9ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "testimonials" WHERE "testimonials"."cabinet_id" = 2
+  [1m[36mTestimonial Load (0.1ms)[0m  [1mSELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 2[0m
+Rendered testimonials/_box.html.erb (6.7ms)
+Rendered cabinets/show.html.erb within layouts/application (1572.9ms)
+Completed 200 OK in 1703ms (Views: 1574.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-07-19 22:50:53 +0200
+Served asset /application.js - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-07-19 22:50:53 +0200
+Served asset /application.css - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/tirette.png" for 127.0.0.1 at 2011-07-19 22:50:53 +0200
+Served asset /tirette.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2011-07-19 22:50:53 +0200
+Served asset /star.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2011-07-19 22:50:53 +0200
+Served asset /twitter.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/mobile.png" for 127.0.0.1 at 2011-07-19 22:50:53 +0200
+Served asset /mobile.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2011-07-19 22:50:53 +0200
+Served asset /email.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2011-07-19 22:50:53 +0200
+Served asset /phone.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/close-quote.gif" for 127.0.0.1 at 2011-07-19 22:51:00 +0200
+Served asset /close-quote.gif - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/open-quote.gif" for 127.0.0.1 at 2011-07-19 22:51:00 +0200
+Served asset /open-quote.gif - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/cabinets/2" for 127.0.0.1 at 2011-07-19 22:51:59 +0200
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  Processing by CabinetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCabinet Load (0.2ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Cabinet' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."cabinet_id" = 2[0m
+  [1m[35mContact Load (0.1ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."cabinet_id" = 2
+  [1m[36mCabinet Load (0.1ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" WHERE "cabinets"."id" = ? LIMIT 1[0m  [["id", 2]]
+Rendered contacts/_box.html.erb (17.7ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "implantations" WHERE "implantations"."cabinet_id" = 2
+  [1m[36mImplantation Load (0.1ms)[0m  [1mSELECT "implantations".* FROM "implantations" WHERE "implantations"."cabinet_id" = 2[0m
+  [1m[35mImplantation Load (0.4ms)[0m  SELECT *, (69.09332411348201 * ABS(latitude - 48.8611047) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.3442463) * 0.7071067811865475) AS distance, CASE WHEN (latitude >= 48.8611047 AND longitude >= 2.3442463) THEN 45.0 WHEN (latitude < 48.8611047 AND longitude >= 2.3442463) THEN 135.0 WHEN (latitude < 48.8611047 AND longitude < 2.3442463) THEN 225.0 WHEN (latitude >= 48.8611047 AND longitude < 2.3442463) THEN 315.0 END AS bearing FROM "implantations" WHERE (latitude BETWEEN 48.71637291688915 AND 49.00583648311085 AND longitude BETWEEN 2.124251286021752 AND 2.564241313978248 AND implantations.id != 2) GROUP BY implantations.id,implantations.address,implantations.latitude,implantations.longitude,implantations.created_at,implantations.updated_at,implantations.site,implantations.cabinet_id ORDER BY (69.09332411348201 * ABS(latitude - 48.8611047) * 0.7071067811865475) + (59.836573914187355 * ABS(longitude - 2.3442463) * 0.7071067811865475)
+Rendered implantations/_box.html.erb (54.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "testimonials" WHERE "testimonials"."cabinet_id" = 2[0m
+  [1m[35mTestimonial Load (0.1ms)[0m  SELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."cabinet_id" = 2
+Rendered testimonials/_box.html.erb (7.0ms)
+Rendered cabinets/show.html.erb within layouts/application (1310.7ms)
+Completed 200 OK in 1444ms (Views: 1312.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-07-19 22:52:01 +0200
+Served asset /application.js - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-07-19 22:52:01 +0200
+Served asset /application.css - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/tirette.png" for 127.0.0.1 at 2011-07-19 22:52:01 +0200
+Served asset /tirette.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2011-07-19 22:52:01 +0200
+Served asset /star.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2011-07-19 22:52:01 +0200
+Served asset /email.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/mobile.png" for 127.0.0.1 at 2011-07-19 22:52:01 +0200
+Served asset /mobile.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2011-07-19 22:52:01 +0200
+Served asset /twitter.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2011-07-19 22:52:01 +0200
+Served asset /phone.png - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-19 22:52:13 +0200
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (93.9ms)
+Completed 200 OK in 98ms (Views: 96.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-07-19 22:52:14 +0200
+Served asset /application.js - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-07-19 22:52:14 +0200
+Served asset /application.css - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/client.png" for 127.0.0.1 at 2011-07-19 22:52:14 +0200
+Served asset /client.png - 304 Not Modified  (6ms)  (pid 22845)
+
+
+Started GET "/assets/cabinet.png" for 127.0.0.1 at 2011-07-19 22:52:14 +0200
+Served asset /cabinet.png - 304 Not Modified  (1ms)  (pid 22845)
+
+
+Started GET "/assets/block_bg.png" for 127.0.0.1 at 2011-07-19 22:52:14 +0200
+Served asset /block_bg.png - 304 Not Modified  (1ms)  (pid 22845)
+
+
+Started GET "/cabinets" for 127.0.0.1 at 2011-07-19 22:52:21 +0200
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  Processing by CabinetsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCabinet Load (0.3ms)[0m  [1mSELECT "cabinets".* FROM "cabinets" [0m
+Rendered cabinets/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 76ms (Views: 44.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-07-19 22:52:21 +0200
+Served asset /application.css - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-07-19 22:52:21 +0200
+Served asset /application.js - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/testimonials/new" for 127.0.0.1 at 2011-07-19 22:52:25 +0200
+  Processing by TestimonialsController#new as HTML
+DEPRECATION WARNING: class_inheritable_attribute is deprecated, please use class_attribute method instead. Notice their behavior are slightly different, so refer to class_attribute documentation first. (called from <class:Cabinet> at /Users/herveleroy/Dropbox/railsbis/magic/app/models/cabinet.rb:11)
+  [1m[35mCabinet Load (0.2ms)[0m  SELECT "cabinets".* FROM "cabinets" 
+Rendered testimonials/_form.html.erb (247.9ms)
+Rendered testimonials/new.html.erb within layouts/application (249.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 338ms (Views: 328.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-07-19 22:52:25 +0200
+Served asset /application.css - 304 Not Modified  (0ms)  (pid 22845)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-07-19 22:52:25 +0200
+Served asset /application.js - 304 Not Modified  (0ms)  (pid 22845)

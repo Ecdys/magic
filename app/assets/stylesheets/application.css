@@ -120,9 +120,15 @@ float:left;
 .gauche {
 	vertical-align:middle;
 	width:32px;
+	bottom: 30px;
+	display: inline;
+	float: left;
+	position: relative;
+	top: -6px;
 }
+
 .bandeau {
-	background-color: #ec3000;
+	background-color: #f26c1b;
 	color: #fffeff;
 	font-weight: bold;
 	width: 98%;

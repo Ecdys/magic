@@ -12,6 +12,7 @@ $(document).ready(function(){
 
 $('#p_contact').click(function(){
 	 $('#contact_panel').toggle();
+	 $('#contact_image').rotate(-180);
 })
 
 
