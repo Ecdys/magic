@@ -1,0 +1,21 @@
+- content_for :head do 
+  = javascript_include_tag "/javascripts/proposal_form.js"
+
+= simple_form_for(@proposal) do |f|
+  - if @proposal.errors.any?
+    %div#error_explanation
+      %h2
+        = pluralize(@proposal.errors.count, "error")
+        prohibited this client from being saved:
+      
+      %ul
+        - @proposal.errors.full_messages.each do |msg|
+          %li= msg
+  
+  %div.field
+    = f.input :title
+    = f.input :description 
+    = f.input :tag_list
+  
+  %div.actions
+    = f.submit

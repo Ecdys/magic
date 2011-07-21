@@ -1,0 +1,22 @@
+%h1 Rechercher un cabinet
+
+%form{ :method => :get, :action => search_cabinets_path }
+  %fieldset
+    %input{ :placeholder => "Votre recherche", :type => :search, :name => :q, :value => params[:q] }
+    %input{ :type => :submit, :value => 'Rechercher' }
+
+  %fieldset
+    %legend Tags
+    - @tags.each do |tag|
+      %label
+        %input{ :type => :checkbox, :value => tag.id, :name => 'tags[]', :checked => (params[:tags] && params[:tags].include?(tag.id.to_s) ? :checked : nil) }
+        = tag.name
+        %small= @facets[:tags][tag.id]
+
+%p
+  = "#{@cabinets.total_entries} cabinet(s) trouvé(s) :"
+
+%ul
+  - @cabinets.each do |cabinet|
+    %li
+      = link_to cabinet.name, cabinet_path(cabinet)

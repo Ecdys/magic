@@ -14,7 +14,16 @@ autocomplete :tag, :name, :class_name => 'ActsAsTaggableOn::Tag'
       format.json { render json: @cabinets }
     end
   end
-
+  
+  def search
+    with = {}
+    with[:tags] = params[:tags] if params[:tags]
+    
+    @cabinets = Cabinet.search params[:q], :with => with
+    @facets = Cabinet.facets params[:q]
+    puts @facets.inspect
+  end
+  
   # GET /cabinets/1
   # GET /cabinets/1.json
   def show

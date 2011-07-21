@@ -1,0 +1,13 @@
+= render :partial => 'summary'
+
+- if current_user.eql?(@proposal.user)
+  %h2 Cabinets sélectionnés
+  %ul
+    - @proposal.cabinets.each do |cabinet|
+      %li
+        = link_to cabinet.name, cabinet_path(cabinet)
+        
+  != link_to "Retour", root_path
+
+- else
+  != link_to "Retour", proposals_path

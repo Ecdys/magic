@@ -17,7 +17,14 @@ Magic::Application.routes.draw do
   resources :contacts
 
   resources :cabinets do
-    get :autocomplete_tag_name, :on => :collection    
+    get :autocomplete_tag_name, :on => :collection
+    get :search, :on => :collection
+  end
+  
+  resources :clients
+  resources :proposals do
+    get :suggest_cabinets, :on => :member
+    post :create_relationships, :on => :member
   end
   
   root :to => "pages#home"

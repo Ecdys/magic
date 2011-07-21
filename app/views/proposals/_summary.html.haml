@@ -1,0 +1,7 @@
+%h1= @proposal.title
+
+= simple_format @proposal.description
+
+%p
+  %strong Tags :
+  = @proposal.tags.map{|tag| tag.name }.to_sentence

@@ -1,0 +1,15 @@
+%h1= @client.name
+%p
+  %strong Statut :
+  = @client.statut
+
+%p
+  %strong Siret :
+  = @client.siret
+
+= simple_format @client.description
+
+%p
+  = link_to "Retour", root_path
+  = " | "
+  = link_to "Editer mon profil", edit_client_path(@client)

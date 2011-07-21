@@ -1,0 +1,20 @@
+[Thu Jul 21 12:25:57.598 2011] [29294] accepting connections
+[Thu Jul 21 12:47:44.607 2011] [29294] caught SIGTERM, shutting down
+[Thu Jul 21 12:47:44.607 2011] [29294] shutdown complete
+[Thu Jul 21 12:47:46.009 2011] [31852] accepting connections
+[Thu Jul 21 12:49:13.114 2011] [31852] caught SIGTERM, shutting down
+[Thu Jul 21 12:49:13.114 2011] [31852] shutdown complete
+[Thu Jul 21 12:49:14.088 2011] [32052] accepting connections
+[Thu Jul 21 14:00:43.387 2011] [32052] rotating indices (seamless=1)
+[Thu Jul 21 14:00:43.429 2011] [32052] rotating index 'cabinet_core': success
+[Thu Jul 21 14:00:43.429 2011] [32052] rotating finished
+[Thu Jul 21 14:06:17.355 2011] [32052] caught SIGTERM, shutting down
+[Thu Jul 21 14:06:17.356 2011] [32052] shutdown complete
+[Thu Jul 21 14:06:18.313 2011] [40970] accepting connections
+[Thu Jul 21 15:08:51.210 2011] [40970] caught SIGTERM, shutting down
+[Thu Jul 21 15:08:51.210 2011] [40970] shutdown complete
+[Thu Jul 21 15:09:23.320 2011] [48073] accepting connections
+[Thu Jul 21 15:19:04.145 2011] [48073] caught SIGTERM, shutting down
+[Thu Jul 21 15:19:04.146 2011] [48073] shutdown complete
+[Thu Jul 21 15:19:05.423 2011] [49332] accepting connections
+[Thu Jul 21 15:28:38.396 2011] [ 1155] accepting connections

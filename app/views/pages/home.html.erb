@@ -15,7 +15,7 @@
 <h3><%= image_tag "client.png", :id => "toto" , :class => "gauche"     %>   Je suis un client</h3>
 
  <li>
-<%= link_to "Je souhaite consulter la liste des cabinets de conseil", cabinets_path %>
+<%= link_to "Je souhaite consulter la liste des cabinets de conseil", search_cabinets_path %>
  </li>
  <li>Je souhaite sélectionner un cabinet de conseil</li>
  <li>Je souhaite lancer un appel d'offre</li>
@@ -51,7 +51,7 @@
 	Je suis un cabinet de conseil</h3>
 
 
-	 <li>Je souhaite consulter les appels d'offre</li>
+	 <li><%= link_to "Je souhaite consulter les appels d'offre", proposals_path %></li>
 	 <li>Je souhaite soumettre ma proposition</li>
 	 <li>
 		<%= link_to "Je souhaite voir ou modifier mon profil", cabinet_path(current_user.cabinet_id)    %>  

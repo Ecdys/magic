@@ -1,0 +1,24 @@
+= render :partial => 'summary'
+
+- if @cabinets.any?
+  %p
+    Nous avons trouvé
+    = @cabinets.total_entries
+    cabinets qui correspondent à votre offre.
+  
+  %p
+    Veuillez choisir les cabinets à qui transmettre l'offre dans la liste :
+  
+  = form_tag create_relationships_proposal_path(@proposal), :method => :post do
+    %ul
+      - @cabinets.each do |cabinet|
+        %li
+          %label
+            %input{ :type => :checkbox, :value => cabinet.id, :name => 'cabinets[]' }
+            = cabinet.name
+            
+    %input{ :type => :submit, :value => "Envoyer aux cabinets sélectionnés" }
+
+- else
+  %p Aucun cabinet ne correspond à votre offre, mais ne désespérez pas !
+

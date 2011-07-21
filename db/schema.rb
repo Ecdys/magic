@@ -10,14 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110718203455) do
+ActiveRecord::Schema.define(:version => 20110721153424) do
 
   create_table "cabinets", :force => true do |t|
     t.string   "name"
     t.string   "statut"
     t.date     "creation_date"
     t.string   "siret"
-    t.text     "description",       :limit => 255
+    t.text     "description"
     t.integer  "rating"
     t.string   "linkedin"
     t.string   "facebook"
@@ -29,6 +29,19 @@ ActiveRecord::Schema.define(:version => 20110718203455) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+  end
+
+  create_table "clients", :force => true do |t|
+    t.string   "name"
+    t.string   "statut"
+    t.string   "siret"
+    t.text     "description"
+    t.string   "linkedin"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "contacts", :force => true do |t|
@@ -60,6 +73,22 @@ ActiveRecord::Schema.define(:version => 20110718203455) do
     t.datetime "updated_at"
     t.string   "site"
     t.integer  "cabinet_id"
+  end
+
+  create_table "proposals", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "relationships", :force => true do |t|
+    t.integer  "proposal_id"
+    t.integer  "cabinet_id"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "taggings", :force => true do |t|

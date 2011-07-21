@@ -1,0 +1,8 @@
+%h1 Toutes les offres
+
+%ul
+  - @proposals.each do |proposal|
+    %li
+      = link_to proposal.title, proposal_path(proposal)
+
+!= link_to "Télécharger au format JSON", proposals_path(:json)

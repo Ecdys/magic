@@ -1,0 +1,23 @@
+= simple_form_for(@client) do |f|
+  - if @client.errors.any?
+    %div#error_explanation
+      %h2
+        = pluralize(@client.errors.count, "error")
+        prohibited this client from being saved:
+      
+      %ul
+        - @client.errors.full_messages.each do |msg|
+          %li= msg
+  
+  %div.field
+    = f.input :name
+    = f.input :statut , :collection => ["SA", "SAS", "SARL", "Association", "SNC", "commandite simple", "commandite par action"], :include_blank => false 
+    = f.input :siret
+    = f.input :description 
+    = f.input :url 
+    = f.input :linkedin 
+    = f.input :twitter 
+    = f.input :facebook 
+  
+  %div.actions
+    = f.submit
