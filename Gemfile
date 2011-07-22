@@ -23,6 +23,9 @@ gem 'omniauth'
 gem 'geocoder'
 gem 'devise'
 
+gem 'carrierwave', '0.5.6'
+gem 'cancan', '1.6.5'
+
 gem 'rails3-jquery-autocomplete'
 gem 'acts-as-taggable-on'
 

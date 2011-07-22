@@ -21,18 +21,21 @@ autocomplete :tag, :name, :class_name => 'ActsAsTaggableOn::Tag'
     
     @cabinets = Cabinet.search params[:q], :with => with
     @facets = Cabinet.facets params[:q]
-    puts @facets.inspect
+    
+    @tags = Tag.find @facets[:tags].map{|tag| tag[0] }
   end
   
   # GET /cabinets/1
   # GET /cabinets/1.json
   def show
     @cabinet = Cabinet.find(params[:id])
-    @contacts = @cabinet.contacts
-    @implantations = @cabinet.implantations
-    @testimonials = @cabinet.testimonials
+    
     respond_to do |format|
-      format.html # show.html.erb
+      format.html do 
+        @contacts = @cabinet.contacts
+        @implantations = @cabinet.implantations
+        @testimonials = @cabinet.testimonials
+      end
       format.json { render json: @cabinet }
     end
   end

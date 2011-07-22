@@ -1,0 +1,2 @@
+module ProposalDocumentsHelper
+end

@@ -27,10 +27,13 @@ Magic::Application.routes.draw do
     post :create_relationships, :on => :member
   end
   
+  resources :proposal_documents
+  
   root :to => "pages#home"
   match "/contacts/:cabinet_id" => "contacts#new"
   match "/implantations/:cabinet_id" => "implantations#new"
   match "/testimonials/:cabinet_id" => "testimonials#new"
+  match "/proxy" => 'pages#proxy'
  
 
   # The priority is based upon order of creation:

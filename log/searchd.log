@@ -17,3 +17,22 @@
 [Thu Jul 21 15:19:04.145 2011] [48073] caught SIGTERM, shutting down
 [Thu Jul 21 15:19:04.146 2011] [48073] shutdown complete
 [Thu Jul 21 15:19:05.423 2011] [49332] accepting connections
+[Fri Jul 22 10:21:48.237 2011] [ 8010] accepting connections
+[Fri Jul 22 17:46:59.432 2011] [ 8010] caught SIGTERM, shutting down
+[Fri Jul 22 17:46:59.539 2011] [ 8010] shutdown complete
+[Fri Jul 22 17:47:00.978 2011] [74246] accepting connections
+[Fri Jul 22 17:49:28.817 2011] [74246] caught SIGTERM, shutting down
+[Fri Jul 22 17:49:28.817 2011] [74246] shutdown complete
+[Fri Jul 22 17:49:29.931 2011] [74589] accepting connections
+[Fri Jul 22 17:55:33.497 2011] [74589] caught SIGTERM, shutting down
+[Fri Jul 22 17:55:33.497 2011] [74589] shutdown complete
+[Fri Jul 22 17:55:34.570 2011] [75364] accepting connections
+[Fri Jul 22 17:56:51.814 2011] [75364] caught SIGTERM, shutting down
+[Fri Jul 22 17:56:51.814 2011] [75364] shutdown complete
+[Fri Jul 22 17:56:52.983 2011] [75542] accepting connections
+[Fri Jul 22 18:24:43.988 2011] [75542] caught SIGTERM, shutting down
+[Fri Jul 22 18:24:44.230 2011] [75542] shutdown complete
+[Fri Jul 22 18:24:47.640 2011] [78845] accepting connections
+[Fri Jul 22 18:28:34.222 2011] [78845] caught SIGTERM, shutting down
+[Fri Jul 22 18:28:34.222 2011] [78845] shutdown complete
+[Fri Jul 22 18:28:35.348 2011] [79340] accepting connections

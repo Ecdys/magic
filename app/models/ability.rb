@@ -12,10 +12,12 @@ class Ability
         can :read, Client, :id => user.client_id
         
         can :manage, Proposal, :user_id => user.id
+        # can :manage, ProposalDocument > to be done
       end
       
       unless user.cabinet.nil?
         can :read, Proposal
+        can :read, ProposalDocument
       end
       
     end

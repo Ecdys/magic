@@ -2,6 +2,13 @@
 
 = simple_format @proposal.description
 
+- if @proposal.proposal_documents.any?
+  %h2 Documents
+  %ul
+    - @proposal.proposal_documents.each do |document|
+      %li
+        != link_to document.document.path.split('/').last, proposal_document_path(document)
+
 %p
   %strong Tags :
   = @proposal.tags.map{|tag| tag.name }.to_sentence

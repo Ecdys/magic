@@ -4,6 +4,9 @@ class Proposal < ActiveRecord::Base
   
   has_many :relationships
   has_many :cabinets, :through => :relationships
+  has_many :proposal_documents
+  
+  accepts_nested_attributes_for :proposal_documents
   
   acts_as_taggable_on :tags
   

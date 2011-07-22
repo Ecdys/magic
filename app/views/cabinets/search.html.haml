@@ -7,11 +7,11 @@
 
   %fieldset
     %legend Tags
-    - @facets[:tags].each_pair do |tag, counter|
+    - @tags.each do |tag|
       %label
-        %input{ :type => :checkbox, :value => tag, :name => 'tags[]', :checked => (params[:tags] && params[:tags].include?(tag) ? :checked : nil) }
-        = tag
-        %small= counter
+        %input{ :type => :checkbox, :value => tag.id, :name => 'tags[]', :checked => (params[:tags] && params[:tags].include?(tag.id.to_s) ? :checked : nil) }
+        = tag.name
+        %small= @facets[:tags][tag.id]
 
 %p
   = "#{@cabinets.total_entries} cabinet(s) trouvé(s) :"

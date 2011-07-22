@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 <%= @profile %>
 
-<%= image_tag @cabinet.logo.url unless @cabinet.logo_file_name.nil? %>
+<%= image_tag @cabinet.logo.url(:small) unless @cabinet.logo_file_name.nil? %>
 
 <p id="titre">
 <span id="titre"> 
@@ -65,13 +65,7 @@
 <br>
 
 <div id ="implantation_panel" style="display:none">
-	<% if @implantations.nil? %>
-	<% else %>
-	<% @implantations.each do |implantation| %>
-	<% @implantation = implantation %>
-	<%= render 'implantations/box' %>
-	<% end %>
-	<% end %>
+	<%= render :partial => '/implantations/box', :collection => @implantations %>
 	<br>
 <%=  button_to 'Ajouter une implantation', implantation_path(@cabinet.id) %>
 </div>

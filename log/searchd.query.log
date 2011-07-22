@@ -74,3 +74,60 @@
 [Thu Jul 21 17:57:14.792 2011] 0.000 sec [scan/3/rel 1 (0,20)] [cabinet_core]
 [Thu Jul 21 17:58:43.088 2011] 0.000 sec [scan/3/rel 1 (0,20)] [cabinet_core]
 [Thu Jul 21 17:59:11.690 2011] 0.000 sec [scan/3/rel 1 (0,20)] [cabinet_core]
+[Fri Jul 22 11:02:15.628 2011] 0.043 sec [scan/2/rel 4 (0,1000) @tags] [cabinet_core]
+[Fri Jul 22 11:02:15.663 2011] 0.000 sec [scan/2/rel 2 (0,20)] [cabinet_core]
+[Fri Jul 22 13:06:27.886 2011] 0.000 sec [scan/2/rel 1 (0,20)] [cabinet_core]
+[Fri Jul 22 13:10:49.287 2011] 0.000 sec [scan/2/rel 1 (0,20)] [cabinet_core]
+[Fri Jul 22 15:45:20.222 2011] 0.000 sec [scan/3/rel 2 (0,20)] [cabinet_core]
+[Fri Jul 22 15:47:08.170 2011] 0.000 sec [scan/3/rel 2 (0,20)] [cabinet_core]
+[Fri Jul 22 17:47:08.810 2011] 0.000 sec [scan/2/rel 4 (0,1000) @tags] [cabinet_core]
+[Fri Jul 22 17:47:08.860 2011] 0.000 sec [scan/2/rel 2 (0,20)] [cabinet_core]
+[Fri Jul 22 17:47:14.161 2011] 0.023 sec [all/2/rel 0 (0,1000) @tags] [cabinet_core] issy
+[Fri Jul 22 17:47:14.168 2011] 0.000 sec [all/2/rel 0 (0,20)] [cabinet_core] issy
+[Fri Jul 22 17:47:18.754 2011] 0.000 sec [all/2/rel 0 (0,1000) @tags] [cabinet_core] paris
+[Fri Jul 22 17:47:18.761 2011] 0.000 sec [all/2/rel 0 (0,20)] [cabinet_core] paris
+[Fri Jul 22 17:47:35.254 2011] 0.075 sec [all/2/rel 0 (0,1000) @tags] [cabinet_core] Issy-les-Moulineaux
+[Fri Jul 22 17:47:35.261 2011] 0.000 sec [all/2/rel 0 (0,20)] [cabinet_core] Issy-les-Moulineaux
+[Fri Jul 22 17:48:53.474 2011] 0.000 sec [all/2/rel 0 (0,1000) @tags] [cabinet_core] Issy-les-Moulineaux
+[Fri Jul 22 17:48:53.482 2011] 0.000 sec [all/2/rel 0 (0,20)] [cabinet_core] Issy-les-Moulineaux
+[Fri Jul 22 17:49:01.784 2011] 0.000 sec [all/2/rel 0 (0,1000) @tags] [cabinet_core] Issy-les-Moulineaux
+[Fri Jul 22 17:49:01.791 2011] 0.000 sec [all/2/rel 0 (0,20)] [cabinet_core] Issy-les-Moulineaux
+[Fri Jul 22 17:49:06.590 2011] 0.001 sec [all/2/rel 0 (0,1000) @tags] [cabinet_core] Issy-les-Moulineaux
+[Fri Jul 22 17:49:06.603 2011] 0.000 sec [all/2/rel 0 (0,20)] [cabinet_core] Issy-les-Moulineaux
+[Fri Jul 22 17:49:33.968 2011] 0.001 sec [all/2/rel 3 (0,1000) @tags] [cabinet_core] Issy-les-Moulineaux
+[Fri Jul 22 17:49:33.980 2011] 0.000 sec [all/2/rel 1 (0,20)] [cabinet_core] Issy-les-Moulineaux
+[Fri Jul 22 17:49:39.115 2011] 0.000 sec [all/2/rel 3 (0,1000) @tags] [cabinet_core] Issy
+[Fri Jul 22 17:49:39.122 2011] 0.000 sec [all/2/rel 1 (0,20)] [cabinet_core] Issy
+[Fri Jul 22 17:49:44.554 2011] 0.000 sec [all/2/rel 0 (0,1000) @tags] [cabinet_core] 92
+[Fri Jul 22 17:49:44.562 2011] 0.000 sec [all/2/rel 0 (0,20)] [cabinet_core] 92
+[Fri Jul 22 17:49:52.615 2011] 0.000 sec [all/2/rel 3 (0,1000) @tags] [cabinet_core] 92130
+[Fri Jul 22 17:49:52.622 2011] 0.000 sec [all/2/rel 1 (0,20)] [cabinet_core] 92130
+[Fri Jul 22 17:50:00.732 2011] 0.001 sec [all/2/rel 0 (0,1000) @tags] [cabinet_core] ile de france
+[Fri Jul 22 17:50:00.741 2011] 0.000 sec [all/2/rel 0 (0,20)] [cabinet_core] ile de france
+[Fri Jul 22 17:50:06.931 2011] 0.001 sec [all/2/rel 0 (0,1000) @tags] [cabinet_core] ile-de-france
+[Fri Jul 22 17:50:06.941 2011] 0.002 sec [all/2/rel 0 (0,20)] [cabinet_core] ile-de-france
+[Fri Jul 22 17:50:12.109 2011] 0.001 sec [all/2/rel 3 (0,1000) @tags] [cabinet_core] île-de-france
+[Fri Jul 22 17:50:12.117 2011] 0.000 sec [all/2/rel 1 (0,20)] [cabinet_core] île-de-france
+[Fri Jul 22 17:51:59.200 2011] 0.001 sec [all/2/rel 3 (0,1000) @tags] [cabinet_core] île-de-france
+[Fri Jul 22 17:51:59.221 2011] 0.000 sec [all/2/rel 1 (0,20)] [cabinet_core] île-de-france
+[Fri Jul 22 17:52:06.583 2011] 0.000 sec [scan/2/rel 4 (0,1000) @tags] [cabinet_core]
+[Fri Jul 22 17:52:06.597 2011] 0.000 sec [scan/2/rel 2 (0,20)] [cabinet_core]
+[Fri Jul 22 18:26:15.014 2011] 0.036 sec [scan/3/ext 2 (0,20)] [cabinet_core]
+[Fri Jul 22 18:26:20.435 2011] 0.000 sec [scan/3/ext 2 (0,20)] [cabinet_core]
+[Fri Jul 22 18:26:48.261 2011] 0.000 sec [scan/3/ext 2 (0,20)] [cabinet_core]
+[Fri Jul 22 18:27:04.437 2011] 0.000 sec [scan/3/ext 2 (0,20)] [cabinet_core]
+[Fri Jul 22 18:28:38.645 2011] 0.000 sec [scan/4/ext 1 (0,20)] [cabinet_core]
+[Fri Jul 22 18:28:46.003 2011] 0.000 sec [scan/4/ext 1 (0,20)] [cabinet_core]
+[Fri Jul 22 18:37:58.066 2011] 0.000 sec [scan/4/ext 1 (0,20)] [cabinet_core]
+[Fri Jul 22 18:40:03.067 2011] 0.000 sec [scan/4/ext 1 (0,20)] [cabinet_core]
+[Fri Jul 22 18:40:03.073 2011] 0.000 sec [scan/4/ext 1 (0,20)] [cabinet_core]
+[Fri Jul 22 18:42:06.939 2011] 0.000 sec [scan/2/rel 4 (0,1000) @tags] [cabinet_core]
+[Fri Jul 22 18:42:06.963 2011] 0.000 sec [scan/2/rel 2 (0,20)] [cabinet_core]
+[Fri Jul 22 18:42:24.482 2011] 0.017 sec [all/2/rel 4 (0,1000) @tags] [cabinet_core] france
+[Fri Jul 22 18:42:24.498 2011] 0.000 sec [all/2/rel 2 (0,20)] [cabinet_core] france
+[Fri Jul 22 18:42:44.784 2011] 0.000 sec [all/2/rel 4 (0,1000) @tags] [cabinet_core] france
+[Fri Jul 22 18:42:44.800 2011] 0.000 sec [all/3/rel 2 (0,20)] [cabinet_core] france
+[Fri Jul 22 18:44:35.847 2011] 0.000 sec [scan/2/rel 4 (0,1000) @tags] [cabinet_core]
+[Fri Jul 22 18:44:35.864 2011] 0.000 sec [scan/2/rel 2 (0,20)] [cabinet_core]
+[Fri Jul 22 18:44:40.973 2011] 0.000 sec [scan/2/rel 4 (0,1000) @tags] [cabinet_core]
+[Fri Jul 22 18:44:40.987 2011] 0.000 sec [scan/3/rel 2 (0,20)] [cabinet_core]

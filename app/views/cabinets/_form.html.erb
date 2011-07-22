@@ -18,8 +18,9 @@ end
   <% end %>
 
   <div class="field">
-    <%= f.input :name %><br />
-    <%= f.input :tag_list %>
+    <%= f.input :name %>
+    <input type="button" value="Récupérer les informations automatiquement" id="get_infos" />
+    <%= f.input :tag_list, :input_html => { 'data-url' => autocomplete_tag_name_cabinets_path } %>
     <%= f.input :statut , :collection => ["SA", "SAS", "SARL", "Association", "SNC", "commandite simple", "commandite par action"], :include_blank => false %>
 	<%= f.input :creation_date, :label => "date de création" %>
 	<%= f.input :siret %>

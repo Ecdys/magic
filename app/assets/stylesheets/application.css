@@ -140,3 +140,5 @@ float:left;
 
 /* forms */
 span.tag		{ background:#EEE; border:1px solid #DDD; padding:.2em .4em; margin-right:.2em; }
+
+input[type=search]				{ width:400px; padding:10px; font-size:1.2em; font-weight:bold; }

@@ -13,6 +13,7 @@ class ProposalsController < ApplicationController
   end
   
   def new
+    @proposal.proposal_documents.build
   end
   
   def create
@@ -21,6 +22,18 @@ class ProposalsController < ApplicationController
       redirect_to suggest_cabinets_proposal_path(@proposal)
     else
       render :action => :new
+    end
+  end
+  
+  def edit
+    @proposal.proposal_documents.build
+  end
+  
+  def update
+    if @proposal.update_attributes params[:proposal]
+      redirect_to proposal_path(@proposal)
+    else
+      render :action => :edit
     end
   end
   

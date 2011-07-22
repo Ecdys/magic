@@ -44,17 +44,24 @@ var TagField = function(selector){
 	input.after(add_tag_input);
 
 	add_tag_input.autocomplete({
-		source: ['tag 1', 'tag 2']
+		source: input.attr('data-url'),
+		select: function(e){
+			create_tag_from_input($(e.target));
+		}
 	});
 
 	add_tag_input.keypress(function(e){
 		if(e.keyCode == 13){
 			e.preventDefault();
-			create_tag(add_tag_input.val());
-			add_tag_input.val('');
-			update_tags();
+			create_tag_from_input($(e.target));
 		}
 	});
+	
+	function create_tag_from_input(current_input){
+		create_tag(current_input.val());
+		current_input.val('');
+		update_tags();
+	}
 
 	function create_tag(name){
 		if(name.trim().length > 0){

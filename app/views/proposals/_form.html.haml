@@ -14,8 +14,21 @@
   
   %div.field
     = f.input :title
-    = f.input :description 
+    = f.input :description
     = f.input :tag_list
+  
+  %ul#documents
+    = f.simple_fields_for :proposal_documents do |d|
+      - if d.object.new_record?
+        %li.new_doc
+          != d.input :document, :required => false
+      - else
+        %li
+          %strong Document existant :
+          = d.object.document.to_s.split('/').last
+  
+  = link_to "Ajouter un autre document", "#", :id => :add_doc
+      
   
   %div.actions
     = f.submit

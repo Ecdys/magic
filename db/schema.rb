@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110721153424) do
+ActiveRecord::Schema.define(:version => 20110722121942) do
 
   create_table "cabinets", :force => true do |t|
     t.string   "name"
@@ -66,13 +66,26 @@ ActiveRecord::Schema.define(:version => 20110721153424) do
   end
 
   create_table "implantations", :force => true do |t|
-    t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "site"
     t.integer  "cabinet_id"
+    t.string   "street_address"
+    t.string   "country"
+    t.string   "administrative_area_level_1"
+    t.string   "administrative_area_level_2"
+    t.string   "administrative_area_level_3"
+    t.string   "locality"
+    t.string   "postal_code"
+  end
+
+  create_table "proposal_documents", :force => true do |t|
+    t.string   "document"
+    t.integer  "proposal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "proposals", :force => true do |t|
